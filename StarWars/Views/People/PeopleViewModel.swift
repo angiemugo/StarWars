@@ -12,6 +12,7 @@ import StarWarsPackage
 
 class PeopleViewModel {
     let people = BehaviorRelay(value: [PeopleViewCell.UIModel]())
+    let error = BehaviorRelay(value: "")
     let disposeBag = DisposeBag()
     
     func fetchPeople() {
@@ -22,7 +23,7 @@ class PeopleViewModel {
             }
             self.people.accept(people)
         } onFailure: { error in
-            print("This is the error: \(error)")
+            self.error.accept(error.localizedDescription)
         }.disposed(by: disposeBag)
     }
     

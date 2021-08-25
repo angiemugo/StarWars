@@ -10,29 +10,44 @@ import RxSwift
 import RxCocoa
 
 class HomeViewController: BaseViewController {
-    @IBOutlet private weak var collectionView: UICollectionView!
+    private let collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        layout.minimumInteritemSpacing = 8
+        layout.minimumLineSpacing = 8
+        layout.scrollDirection = .vertical
+        layout.itemSize = CGSize(width: 90, height: 90)
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.register(HomeViewCollectionViewCell.self, forCellWithReuseIdentifier: HomeViewCollectionViewCell.identifier)
+        collectionView.tag = 1
+        collectionView.backgroundColor = .systemBackground
+        return collectionView
+    }()
     
     let homeViewModel: HomeViewModel
     
     init(_ homeViewModel: HomeViewModel) {
         self.homeViewModel = homeViewModel
-        super.init(nibName: ControllerIds.homeViewController.rawValue, bundle: nil)
+        super.init(nibName: nil, bundle: nil)
     }
     
+    override func loadView() {
+        view = collectionView
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         homeViewModel.getModels()
         configureCollectionView()
     }
     
-    func configureView() {
+    private func configureView() {
         collectionView.backgroundColor = UIColor.systemBlue
         configureNavigationBar("Home")
     }
     
     private func configureCollectionView() {
-        collectionView.register(UINib(nibName: HomeViewCollectionViewCell.identifier,
-                                      bundle: nil), forCellWithReuseIdentifier: HomeViewCollectionViewCell.identifier)
         homeViewModel.serviceDataSource.asObservable()
             .bind(to: collectionView
                     .rx.items(cellIdentifier: HomeViewCollectionViewCell.identifier,

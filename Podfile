@@ -7,7 +7,6 @@ target 'StarWars' do
   # Pods for StarWars
   pod 'RxSwift'
   pod 'RxCocoa'
-  pod 'StarWarsAngie', :git => 'https://github.com/angiemugo/StarWarsAngie.git', :branch => 'master'
 
   target 'StarWarsTests' do
     inherit! :search_paths

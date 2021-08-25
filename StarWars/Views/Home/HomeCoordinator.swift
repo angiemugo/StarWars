@@ -8,8 +8,8 @@
 import UIKit
 
 class HomeCoordinator {
-    let window: UIWindow
-    var navController: UINavigationController?
+    private let window: UIWindow
+    private var navController: UINavigationController?
     
     init(_ window: UIWindow) {
         self.window = window

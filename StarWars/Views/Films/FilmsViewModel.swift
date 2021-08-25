@@ -11,6 +11,7 @@ import StarWarsPackage
 
 class FilmsViewModel {
     let films = BehaviorRelay(value: [FilmViewCell.UIModel]())
+    let error = BehaviorRelay(value: "")
     let disposeBag = DisposeBag()
     
     func fetchFilms() {
@@ -23,7 +24,7 @@ class FilmsViewModel {
             }
             self.films.accept(films)
         } onFailure: { error in
-            print("This is the error: \(error)")
+            self.error.accept(error.localizedDescription)
         }.disposed(by: disposeBag)
     }
     

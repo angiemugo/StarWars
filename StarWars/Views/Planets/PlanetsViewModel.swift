@@ -11,7 +11,8 @@ import StarWarsPackage
 
 class PlanetsViewModel {
     let planets = BehaviorRelay(value: [PlanetsViewCell.UIModel]())
-    let disposeBag = DisposeBag()
+    let error = BehaviorRelay(value: "")
+    private let disposeBag = DisposeBag()
     
     func fetchPlanets() {
         RemoteDataSource.shared.starWarsPlanets().subscribe { [weak self] planets in
@@ -21,7 +22,7 @@ class PlanetsViewModel {
             }
             self.planets.accept(planets)
         } onFailure: { error in
-            print("This is the error: \(error)")
+            self.error.accept(error.localizedDescription)
         }.disposed(by: disposeBag)
     }
     
