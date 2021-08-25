@@ -40,7 +40,6 @@ class HomeViewCollectionViewCell: UICollectionViewCell {
     private func setupViews() {
         addSubview(itemImageView)
         addSubview(itemLabel)
-
         NSLayoutConstraint.activate([
             itemImageView.heightAnchor.constraint(equalTo: itemImageView.widthAnchor),
             itemImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
@@ -53,7 +52,6 @@ class HomeViewCollectionViewCell: UICollectionViewCell {
             itemLabel.topAnchor.constraint(equalTo: itemImageView.bottomAnchor, constant: 5),
             itemLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 5)
         ])
-
     }
 
     func configureCell(_ model: UIModel) {

@@ -10,7 +10,6 @@
 		04E416C826D0A9DD00738EFC /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 04E416C726D0A9DD00738EFC /* RxSwift */; };
 		04E416CC26D0A9DD00738EFC /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 04E416CB26D0A9DD00738EFC /* RxRelay */; };
 		04E416CE26D0A9DD00738EFC /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 04E416CD26D0A9DD00738EFC /* RxCocoa */; };
-		FD2C806026D6DE320071C375 /* UITableViewController+StarWars.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2C805F26D6DE320071C375 /* UITableViewController+StarWars.swift */; };
 		FD4733EC26C2ED070080D9B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4733EB26C2ED070080D9B9 /* AppDelegate.swift */; };
 		FD4733F826C2ED090080D9B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD4733F726C2ED090080D9B9 /* Assets.xcassets */; };
 		FD4733FB26C2ED090080D9B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD4733F926C2ED090080D9B9 /* LaunchScreen.storyboard */; };
@@ -54,7 +53,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FD2C805F26D6DE320071C375 /* UITableViewController+StarWars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewController+StarWars.swift"; sourceTree = "<group>"; };
 		FD4733E826C2ED070080D9B9 /* StarWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD4733EB26C2ED070080D9B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD4733F726C2ED090080D9B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -256,7 +254,6 @@
 				FD47342826C2ED4B0080D9B9 /* UICollectionViewCell+Identifier.swift */,
 				FD47343026C2ED4B0080D9B9 /* UITableViewCell+Identifier.swift */,
 				FD47343126C2ED4B0080D9B9 /* Date+Starwars.swift */,
-				FD2C805F26D6DE320071C375 /* UITableViewController+StarWars.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -402,7 +399,6 @@
 			files = (
 				FD47345926C2ED4B0080D9B9 /* PlanetsViewCell.swift in Sources */,
 				FD47345026C2ED4B0080D9B9 /* PeopleViewModel.swift in Sources */,
-				FD2C806026D6DE320071C375 /* UITableViewController+StarWars.swift in Sources */,
 				FD47344F26C2ED4B0080D9B9 /* Date+Starwars.swift in Sources */,
 				FD4733EC26C2ED070080D9B9 /* AppDelegate.swift in Sources */,
 				FD47344926C2ED4B0080D9B9 /* FilmsViewController.swift in Sources */,

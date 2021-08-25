@@ -30,6 +30,7 @@ class BaseViewController: UIViewController {
     }
 
     func showErrorAlert(_ title: String, _ description: String, _ action: @escaping ((UIAlertAction) -> Void)) {
+        guard !description.isEmpty else { return }
         let alert = UIAlertController(title: title, message: description, preferredStyle:.alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: action)
         alert.addAction(action)
