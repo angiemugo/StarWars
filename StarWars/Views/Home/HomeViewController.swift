@@ -16,7 +16,7 @@ class HomeViewController: BaseViewController {
         layout.minimumInteritemSpacing = 8
         layout.minimumLineSpacing = 8
         layout.scrollDirection = .vertical
-        layout.itemSize = CGSize(width: 90, height: 90)
+        layout.itemSize = CGSize(width: 180, height: 150)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -27,7 +27,7 @@ class HomeViewController: BaseViewController {
     }()
     
     let homeViewModel: HomeViewModel
-    
+
     init(_ homeViewModel: HomeViewModel) {
         self.homeViewModel = homeViewModel
         super.init(nibName: nil, bundle: nil)
@@ -36,15 +36,16 @@ class HomeViewController: BaseViewController {
     override func loadView() {
         view = collectionView
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         homeViewModel.getModels()
-        configureCollectionView()
+        configureView()
     }
     
     private func configureView() {
-        collectionView.backgroundColor = UIColor.systemBlue
         configureNavigationBar("Home")
+        configureCollectionView()
     }
     
     private func configureCollectionView() {

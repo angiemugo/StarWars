@@ -39,6 +39,7 @@ class PlanetsViewController: BaseViewController {
     private func setUpView() {
         planetsViewModel.fetchPlanets()
         configureTableView()
+        configureNavigationBar("StarWars Planets")
     }
     
     private func configureTableView() {

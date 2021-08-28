@@ -23,7 +23,6 @@ class PlanetsViewCell: UITableViewCell {
 
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Volkswagen"
         label.font = .systemFont(ofSize: 16, weight: .bold)
         label.textColor = .label
         label.textAlignment = .left
@@ -34,7 +33,6 @@ class PlanetsViewCell: UITableViewCell {
 
     private let populationLabel: UILabel = {
         let label = UILabel()
-        label.text = "Sliver Polo"
         label.font = .systemFont(ofSize: 16, weight: .regular)
         label.textColor = .label
         label.textAlignment = .left
@@ -45,7 +43,6 @@ class PlanetsViewCell: UITableViewCell {
 
     private let climateLabel: UILabel = {
         let label = UILabel()
-        label.text = "Sliver Polo"
         label.font = .systemFont(ofSize: 16, weight: .regular)
         label.textColor = .label
         label.textAlignment = .left

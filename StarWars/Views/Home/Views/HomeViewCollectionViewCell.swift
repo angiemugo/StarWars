@@ -41,7 +41,6 @@ class HomeViewCollectionViewCell: UICollectionViewCell {
         addSubview(itemImageView)
         addSubview(itemLabel)
         NSLayoutConstraint.activate([
-            itemImageView.heightAnchor.constraint(equalTo: itemImageView.widthAnchor),
             itemImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             itemImageView.topAnchor.constraint(equalTo: topAnchor),
             itemImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),

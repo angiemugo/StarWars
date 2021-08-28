@@ -39,6 +39,7 @@ class FilmsViewController: BaseViewController {
     func setUpView() {
         filmsViewModel.fetchFilms()
         configureTableView()
+        configureNavigationBar("StarWars Films")
     }
     
     private func configureTableView() {

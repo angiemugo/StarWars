@@ -22,7 +22,6 @@ class PeopleViewCell: UITableViewCell {
 
     private let nameLabel: UILabel = {
         let label = UILabel()
-        label.text = "Volkswagen"
         label.font = .systemFont(ofSize: 16, weight: .bold)
         label.textColor = .label
         label.textAlignment = .center
@@ -33,7 +32,6 @@ class PeopleViewCell: UITableViewCell {
 
     private let eyeColorLabel: UILabel = {
         let label = UILabel()
-        label.text = "Sliver Polo"
         label.font = .systemFont(ofSize: 16, weight: .regular)
         label.textColor = .label
         label.textAlignment = .center

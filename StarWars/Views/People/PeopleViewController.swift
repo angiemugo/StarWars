@@ -39,6 +39,7 @@ class PeopleViewController: BaseViewController {
     func setUpView() {
         peopleViewModel.fetchPeople()
         configureTableView()
+        configureNavigationBar("StarWars People")
     }
     
     private func configureTableView() {
